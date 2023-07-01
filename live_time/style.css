@@ -1,0 +1,13 @@
+@font-face {
+    font-family: numbersB;
+    src: url(./font/Nunito-ExtraBold.ttf);
+}
+body {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    font-size: 15em;
+    font-family: numbersB;
+    color: #2B2D42;
+}

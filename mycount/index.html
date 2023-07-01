@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <title>Stream Timer</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="countdown">
+    <div id="cntr" class="div1">Loading...</div>
+    <div id="supp" class="div2">Loading...</div>
+    </div>
+    <py-script>
+        import asyncio as sleep
+        from datetime import datetime
+        import math
+        import random
+
+
+        
+
+        async def countdown():
+            time_remaining = "10:00"
+            line_interval = 17
+
+            time_seconds = datetime.strptime(time_remaining, "%M:%S").minute*60 + datetime.strptime(time_remaining, "%M:%S").second
+            lines = ["BREWING TEA", "STARTING GAMES", "PREPARING MUSIC", "STRESSING OUT", "JUST SLEEPING", "MAKING 'FUNNY' JOKES", "LOCKING THE DOOR", "SETTING UP AUDIO", "CHATTING ON DISCORD", "CHECKING TWITTER", "THINKING ABOUT LIFE"]
+            number = random.randint(0, len(lines) - 1)
+            pyscript.write("supp", lines[number] + "...") 
+            while True:
+                await sleep.sleep(1)
+                timeminutes = math.floor(time_seconds / 60)
+                if timeminutes < 10:
+                    timeminutes = "0" + str(timeminutes)
+                else:
+                    timeminutes = str(timeminutes)
+                timeseconds = (time_seconds % 60)
+                if timeseconds < 10:
+                    timeseconds = "0" + str(timeseconds)
+                else:
+                    timeseconds = str(timeseconds)
+                timefull = str(timeminutes) + ":" + str(timeseconds)
+
+                if time_seconds % line_interval == 0:
+                    number = random.randint(0,5)
+                    pyscript.write("supp", lines[number] + "...")                   
+
+
+
+
+                pyscript.write("cntr", timefull)
+                time_seconds = time_seconds - 1
+                if time_seconds < 0:
+                    pyscript.write("cntr", "Now...")
+                    break
+
+
+
+
+
+
+
+        pyscript.run_until_complete(countdown())
+    </py-script>
+</body></html>

@@ -1,0 +1,38 @@
+@font-face {
+    font-family: numbersB;
+    src: url(./font/Nunito-Bold.ttf);
+  }
+@font-face {
+font-family: numbersBB;
+src: url(./font/Nunito-ExtraBold.ttf);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #06050500;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.countdown {
+    font-size: 13em;
+    color: #2B2D42;
+    font-family: numbersB;
+    width: 5em;
+    max-width: 5em;
+    text-align: left;
+    justify-content: center;
+    line-height: 0;
+    padding-left: 0.1em;
+}
+.div1 {
+    padding-top: 0.5em;
+    padding-bottom: 0.35em;
+}
+.div2 {
+    font-family: numbersBB;
+    font-size: 0.33em;
+    line-height: 1.5;
+}
