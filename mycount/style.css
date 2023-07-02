@@ -8,31 +8,25 @@ src: url(./font/Nunito-ExtraBold.ttf);
 }
 body {
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #06050500;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
-.countdown {
-    font-size: 13em;
-    color: #2B2D42;
-    font-family: numbersB;
-    width: 5em;
-    max-width: 5em;
-    text-align: left;
-    justify-content: center;
-    line-height: 0;
-    padding-left: 0.1em;
+#output{
+    font-size: 150%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-.div1 {
-    padding-top: 0.5em;
-    padding-bottom: 0.35em;
+#package {
+  display: flex;
+  font-family: numbersBB;
+  font-size: 7em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.div2 {
-    font-family: numbersBB;
-    font-size: 0.33em;
-    line-height: 1.5;
+#quote {
+  font-size: 75%;
+  margin: 0;
+  font-family: numbersB;
 }
