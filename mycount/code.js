@@ -19,7 +19,7 @@ const intervalId = setInterval(function() {
         quote.innerHTML = lines[quote_pick]
         time_now = time_now + 1000
     } else {
-        output.innerHTML = "Any minute now..."
+        output.innerHTML = "Now..."
         clearInterval(intervalId);
     }
   }, 1000);
