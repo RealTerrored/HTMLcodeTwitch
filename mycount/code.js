@@ -1,7 +1,7 @@
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
-const seconds = "300"
+const seconds = "600"
 const output = document.getElementById("output")
 const quote = document.getElementById("quote")
 const lines = ["BREWING TEA", "STARTING GAMES", "PREPARING MUSIC", "STRESSING OUT", "JUST SLEEPING", "MAKING 'FUNNY' JOKES", "LOCKING THE DOOR", "SETTING UP AUDIO", "CHATTING ON DISCORD", "CHECKING TWITTER", "THINKING ABOUT LIFE"]

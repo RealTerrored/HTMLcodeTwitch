@@ -1,0 +1,32 @@
+@font-face {
+    font-family: numbersB;
+    src: url(./font/Nunito-ExtraBold.ttf);
+}
+@font-face {
+    font-family: sdigit;
+    src: url(./font/Calculator.ttf);
+}
+@keyframes fade{
+    0%   {opacity: 100%; transform: translate(0, 0);}
+    100% {opacity: 0%; transform: translate(50pt, 0);}
+}
+body {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    font-size: 2em;
+    font-family: sdigit;
+    color: #2B2D42;
+}
+#chatbox {
+    justify-content: flex-end;
+    display: flex;
+    flex-flow:column;
+    width: 500px;
+    height: 200px;
+}
+.messages {
+    margin: 0;
+    padding: 0;
+}
