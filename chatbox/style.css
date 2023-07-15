@@ -1,3 +1,9 @@
+:root {
+    --font-color: #2B2D42;
+    --bg-color: #D81532;
+    --bg-color2: #ED213D;
+  }
+  
 @font-face {
     font-family: numbersB;
     src: url(./font/Nunito-ExtraBold.ttf);
@@ -7,15 +13,19 @@
     src: url(./font/Calculator.ttf);
 }
 @keyframes fade{
-    0%   {opacity: 100%; transform: translate(0, 0);}
-    100% {opacity: 0%; transform: translate(50pt, 0);}
+    0%   {border-radius: 0;}
+    100% {border-radius: 10px;}
+}
+@keyframes fade-out{
+    0%   {opacity: 100%;}
+    100% {opacity: 0%; transform: translate(100pt, 0);}
 }
 body {
     align-items: center;
     justify-content: center;
     display: flex;
     height: 100vh;
-    font-size: 2em;
+    font-size: 7em;
     font-family: sdigit;
     color: #2B2D42;
 }
@@ -24,7 +34,8 @@ body {
     display: flex;
     flex-flow:column;
     width: 500px;
-    height: 200px;
+    height: 1000px;
+    /*background-color: var(--bg-color);*/
 }
 .messages {
     margin: 0;
